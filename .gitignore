@@ -2,6 +2,8 @@
 /*/target/
 /*.iml
 /*/*.iml
+/.idea
+*/.idea
 /.idea/*
 */.idea/*
 /*/.mvn/
@@ -10,4 +12,5 @@
 /*/mvnw.*
 .DS_Store
 */.DS_Store
+
 

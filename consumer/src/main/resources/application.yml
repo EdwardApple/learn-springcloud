@@ -13,3 +13,11 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+
+consumer:
+  ribbon:
+    NFLoadBalancerRuleClassName=com:
+      netflix:
+        loadbalancer:
+          RandomRule:
