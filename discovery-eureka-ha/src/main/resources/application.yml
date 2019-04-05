@@ -1,0 +1,29 @@
+---
+server:
+  port: 8761
+spring:
+  profiles: 192.168.31.111
+
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: 192.168.31.111
+  client:
+    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://192.168.31.215:${server.port}/eureka/
+
+---
+server:
+  port: 8762
+spring:
+  profiles: 192.168.31.215
+
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: 192.168.31.215
+  client:
+    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://192.168.31.111:${server.port}/eureka/
